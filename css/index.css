@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+  }
+
+  .headName{
+    height: 12vh;
+    background-image: url('/imgs/bal1.webp');
+    background-position-x: right;
+    background-position-y: -190px;
+    background-repeat: no-repeat;
+    background-color: #efe1fe;
+  }
+  
+  /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #ad93d8;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+    font-size: 1em;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #f79394;
+    color: white;
+  }
