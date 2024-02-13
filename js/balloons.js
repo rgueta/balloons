@@ -10,7 +10,7 @@ function getRandomStyles() {
   var b = random(255);
   var mt = random(200);
   var ml = random(50);
-  var dur = random(5) + 5;
+  var dur = random(5) + 10;
   return `
   background-color: rgba(${r},${g},${b},0.7);
   color: rgba(${r},${g},${b},0.7); 

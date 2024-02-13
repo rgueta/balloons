@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/balloons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,18 +19,27 @@
         </header>
     </article>
     <article>
-        <nav>
-            <div class="topnav">
-            <a class="active" href="#home" onclick="tagClicked()">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+        <nav id="block">
+            <div class="topnav" id="myTopnav">
+                <a class=" active" href="/">Home</a>
+                <a href="#news" >Noticias</a>
+                <a href="#contact" >Contacto</a>
+                <a href="#about" >Nosotros</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>
             </div>
         </nav>
       </article>
+      <div class="banner">
+        <h1 id="BannerTitle1">Welcome to the site</h1>
+        <h5>Sign up for free today</h5>
+        <button>Get started</button>
+      </div>
+
     <div id="balloon-container">
     </div>
-    <script type="text/javascript" src="./scripts.js"></script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
     <script type="text/javascript" src="./js/balloons.js"></script>
 </body>
 </html>
