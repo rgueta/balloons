@@ -5,48 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/balloons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="icon" type="image/png" href="./imgs/bal2.png">
     <title>Ballons</title>
 </head>
 <body>
-    <article>
-        <header>
-            <div class="headName">
-                <!-- <div></div> -->
-
-            </div>
-            
-        </header>
-    </article>
-    <article>
-        <nav id="block">
-            <div class="topnav" id="myTopnav">
-                <a class=" active" href="/">Home</a>
-                <a href="#news" >Noticias</a>
-                <a href="#contact" >Contacto</a>
-                <a href="#about" >Nosotros</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i>
-                  </a>
-            </div>
-        </nav>
-      </article>
-      <div class="banner">
-        <div class="slide-txt">
-            <p id="bannerTitle1">Welcome to the site</p>
-        
-            <div id="bannerTitle2">
-                <p>Tu evento sera recorado por siempre</p>
-            </div>
-            <div id="bannerBtn">
-                <button>Contactanos</button>
-            </div>
+    <nav>
+        <div class="logo">Brand</div>
+        <!----- toggle menu button -----  -->
+        <span class="menuBtn" onclick="openNav()">
+            <!-- &#9776; -->
+            <i class="fa fa-bars"></i>
+        </span>
+        <div class="navLinks">
+            <ul>
+                <li class="nav_item1"><a href="/">Home</a></li>
+                <li class="nav_item2"><a href="#news" >Noticias</a></li>
+                <li class="nav_item3"><a href="#contact" >Contacto</a></li>
+                <li class="nav_item4"><a href="#about" >Nosotros</a></li>
+            </ul>
         </div>
-      </div>
+    </nav>
+    <!------- responsive side navbar --------------------->
+    <div class="sideNav" id="sidenav">
+        <a href="#" class="closeBtn" onclick="closeNav()">
+            <!-- &#10060; -->
+            <i class="fas fa-times"></i>
+        </a>
+        <a href="/">Inicio</a>
+        <a href="#news">Noticias</a>
+        <a href="#contact">Contacto</a>
+        <a href="#about">Nosotros</a>
+    </div>
+     <!-- Header content with banner image -->
+    <div class="row">
+        <div class="column1">
+        <h1>Decora tu evento</h1>
+        <p>Festejemos tus logros y dias felices!</p>
+        <button>CONTACTANOS</button>
+        </div>
+        <div class="column2">
+        <img src="./imgs/party1.png" alt="banner" width="500px">
+        </div>
+
+
+        
+    </div>
+    <div class="events-title">
+        <p>Eventos reaLizados</p>
+    </div>
+    <div class="some-events">
+        <div id="event1">
+            <!-- <img src="./imgs/party2.png" alt=""> -->
+        </div>
+        <div id="event2">
+
+        </div>
+        <div id="event3">
+
+        </div>
+    </div>
     <div id="balloon-container">
     </div>
+    
+    <script>
+        // javascript to shows up menu ---------------------
+        function openNav(){
+            document.getElementById("sidenav").style.width = "50%"
+        }
+
+        function closeNav(){
+            document.getElementById("sidenav").style.width = "0%"
+        }
+    </script>
     <script type="text/javascript" src="./js/scripts.js"></script>
     <script type="text/javascript" src="./js/balloons.js"></script>
+   
 </body>
 </html>

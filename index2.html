@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/index2.css">
+    <link rel="stylesheet" type="text/css" href="./css/balloons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="./imgs/bal2.png">
+    <title>Ballons</title>
+</head>
+<body>
+    <header>
+        <!-- <div class="headName"></div> -->
+        <nav>
+            <div class="logo">Brand</div>
+            <!----- toggle menu button -----  -->
+            <span class="menuBtn" onclick="openNav()">&#9776;</span>
+            <div class="navLinks">
+                <ul>
+                    <li class="nav_item1"><a href="/">Home</a></li>
+                    <li class="nav_item2"><a href="#news" >Noticias</a></li>
+                    <li class="nav_item3"><a href="#contact" >Contacto</a></li>
+                    <li class="nav_item4"><a href="#about" >Nosotros</a></li>
+                    <button type="button">Login</button>
+                </ul>
+            </div>
+        </nav>
+        <!------- responsive side navbar --------------------->
+        <div class="sideNav" id="sidenav">
+            <a href="#" class="closeBtn" onclick="closeNav()">&#10060;</a>
+            <a href="/">Inicio</a>
+            <a href="#news">Noticias</a>
+            <a href="#contact">Contacto</a>
+            <a href="#about">Nosotros</a>
+        </div>
+    </header>
+
+     <!-- Header content with banner image -->
+   <div class="row">
+    <div class="column1">
+      <h1>Responsive Design</h1>
+      <p>Contact us for responsive web design to grow your business!</p>
+      <button>PURCHASE</button>
+    </div>
+    <div class="column2">
+      <img src="./imgs/party1.png" alt="banner" width="500px">
+    </div>
+  </div>
+      <div class="banner">
+        <div class="slide-txt">
+            <p id="bannerTitle1">Welcome to the site</p>
+        
+            <div id="bannerTitle2">
+                <p>Tu evento sera recorado por siempre</p>
+            </div>
+            <div id="bannerBtn">
+                <button>Contactanos</button>
+            </div>
+        </div>
+      </div>
+    <div id="balloon-container">
+    </div>
+    <script>
+        // javascript to shows up menu ---------------------
+        function openNav(){
+            document.getElementById("sidenav").style.width = "50%"
+        }
+
+        function closeNav(){
+            document.getElementById("sidenav").style.width = "0%"
+        }
+    </script>
+    <script type="text/javascript" src="./js/scripts.js"></script>
+    <script type="text/javascript" src="./js/balloons.js"></script>
+   
+</body>
+</html>

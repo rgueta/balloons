@@ -1,176 +1,236 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-    margin: 0;
-  }
-
-  .headName{
-    height:130px;
-    background-image: url('/imgs/bal1.webp');
-    background-position-x: right;
-    background-position-y: -190px;
-    background-repeat: no-repeat;
-    background-color: #efe1fe;
-  }
-  
-  /* Add a black background color to the top navigation */
-
-.topnav {
-    background-color: #ad93d8;
-    overflow: hidden;
-    transition: height 300ms linear;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: right;
-    color: #f2f2f2;
-    font-family: "PT Sans", Calibri, Tahoma, sans-serif;
-    font-size: 1em;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  .topnav .icon{
-    display: none;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #a486d0 ;
-    color: white;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #f79394;
-    color: white;
-  }
-
-
-  /* Restore inactive  link */
-  .topnav a.inactive {
-    background-color: #ad93d8;
-    color: white;
-  }
-
-  /* banner ------------------------------------- */
-  .banner{
-    background-position:right center;
-    background-image: url(../imgs/work1.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    display: block;
-    height: 40vh;
-    margin-top: 0px;
-    position: relative;
-    width: 100%;
-  }
-
-  .slide-txt{
-    /* display: flex;
-    flex-direction: row;
-    flex: 1; */
-    /* text-align: center;
-    vertical-align: middle; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    color: #fff;
-    letter-spacing: 2px;
-
-    line-height: 35px;
-    top: 30%;
-    left: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-
-    /* line-height: 25px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50, -50%);
-    animation-name: posi2; */
-
-    --webkit-animation-name: posi;
-    --webkit-animation-duration: 2.s;
-    animation-name: posi;
-    animation-duration: 2s;
+  background-image: linear-gradient(to right, rgba(200, 8,207, 0.75),
+   rgba(28, 70, 184, 0.8)), url(../imgs/work1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
 }
 
-  .slide-txt  #bannerTitle1{
-    font-size: 2.6em;
-    border-radius: 10px;
-    background: rgba(9,9,9,0.3);
-    
-    padding:5px;
-    top: 50%;
+/* navigation section ------------------- */
+nav {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 5%;
+}
+nav .logo{
+  font-size: 30px;
+  font-weight: 700;
+}
+nav ul{
+  display: flex;
+  list-style: none;
+}
+nav ul li{
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+nav ul li a{
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .navLinks button{
+  padding: 2px 20px;
+  border-radius: 10px;
+  color: blue;
+  font-size: 16px;
+  border-style: none;
+  font-weight: 700;
+  margin-left: 10px;
+}
+nav ul li:hover{
+  background-color: rgb(44, 1, 197);
+}
+nav .menuBtn{
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none;
+}
+ 
+/* slide menu  -------------- */
+
+.sideNav{
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0%;
+  background-color: rgb(44, 1, 197);
+  overflow-x: hidden;
+  transition: 0.3s ease-in;
+  padding-top: 60px;
+  display: none;
+}
+ 
+.sideNav a{
+  padding: 8px 8px 8px 40px;
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  color: #d1d1d1;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.sideNav a button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: blue;
+  font-size: 16px;
+  border-style: none;
+  font-weight: 700;
+}
+.sideNav a:hover{
+  color: white;
+}
+.sideNav .closeBtn{
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+/* main section --------------------- */
+ 
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2% 5%;
+}
+.row .column1 {
+  padding-right: 50px;
+}
+.column1 h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+.column1 p {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.column1 button {
+  cursor: pointer;
+  width: 170px;
+  padding: 12px 20px;
+  border-radius: 20px;
+  border-style: none;
+  color: blue;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* Section events */
+.events-title{
+  background: rgba(9,9,9,0.1);
+  padding: 10px;
+}
+
+.events-title p{
+  text-align: center;
+  width: 100%;
+}
+
+
+.some-events{
+  margin: 10px;
+  height: 200px;
+  display: flex;
+}
+
+#event1, #event2, #event3{
+  background-size:contain;
+  background-repeat: no-repeat;
+  width: 33%;
+  border-color:#d1d1d1;
+  border-style: solid;
+  border-width: 1px;
+
+}
+
+#event2, #event3{
+  margin-left: 10px;
+}
+
+#event1{
+  background-image:url(../imgs/party2.png);
+}
+
+#event2{
+  background-image:url(../imgs/party3.png);
+}
+
+#event3{
+  background-image:url(../imgs/party4.png);
+}
+
+/* Responsive section ------------------ */
+
+/* responsive navbar css */
+@media screen and (max-width: 600px) {
+  nav .menuBtn{
+    display: flex;
     color:white;
   }
-
-
-  .slide-txt  #bannerTitle2{
-    top: 50%;
-    transform: translateY(-20%);
-
+  nav .navLinks{
+    display: none;
+  }
+  .sideNav {
+    display: block !important;
   }
 
-
-  .slide-txt  #bannerTitle2 p{
-    font-size: 1.2em;
-    border-radius: 10px;
-    border: 10px;
-    background: rgba(9,9,9,0.3);
-    padding:5px;
-    color:white;
+  .column1 h1 {
+    font-size: 35px;
+  }
+  .row {
+    flex-direction: column;
+ 
+  }
+  .row .column1 {
+    padding: 30px;
   }
 
-  .slide-txt #bannerBtn{
-    top: 50%;
-    transform: translateY(100%);
-  }
-
-  .slide-txt #bannerBtn button{
-    cursor: pointer;
-    font-size: 1.2em;
-    border-radius: 5px;
-    border-color: white;
-    background: rgba(9,9,9,0.3);
-    padding:10px;
-    color:white;
-  }
-
-  .slide-txt #bannerBtn button:hover{
-    background: rgba(15, 14, 14, 0.5);
-    padding:10px;
-  }
-
-
-  /* Media query */
-
-  @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-
-    .headName{
-      background-position-x: right;
-      background-position-y: 30%;
-      background-size: 40%;
-    }
-  }
+  #event1, #event2, #event3{
+    width: 100%;
   
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
   }
+}
+
+/* Header content responsive */
+@media screen and (max-width: 980px) {
+  .column2 img {
+    width: 350px;
+  }
+  .column1 h1 {
+    font-size: 40px;
+  }
+  .column1 p{
+    font-size: 17px;
+  }
+
+}
+ 
+@media screen and (max-width: 600px) {
+ 
+  .column1 h1 {
+    font-size: 35px;
+  }
+  .row {
+    flex-direction: column;
+ 
+  }
+  .row .column1 {
+    padding: 30px;
+  }
+}
