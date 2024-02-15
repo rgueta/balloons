@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/index.css">
     <link rel="stylesheet" type="text/css" href="./css/balloons.css">
+    <link rel="stylesheet" type="text/css" href="./css/social.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="icon" type="image/png" href="./imgs/bal2.png">
     <title>Ballons</title>
@@ -19,7 +20,7 @@
         </span>
         <div class="navLinks">
             <ul>
-                <li class="nav_item1"><a href="/">Home</a></li>
+                <li class="nav_item1"><a href="/">Inicio</a></li>
                 <li class="nav_item2"><a href="#news" >Noticias</a></li>
                 <li class="nav_item3"><a href="#contact" >Contacto</a></li>
                 <li class="nav_item4"><a href="#about" >Nosotros</a></li>
@@ -36,6 +37,11 @@
         <a href="#news">Noticias</a>
         <a href="#contact">Contacto</a>
         <a href="#about">Nosotros</a>
+        <div class="nav-social">
+            <a href="#" class="nav-social-item social-facebook icon-social" onclick="fb_clicked()"></a>
+            <a href="#" class="nav-social-item social-twitter icon-social" onclick="tw_clicked()"></a>
+            <a href="#" class="nav-social-item social-instagram icon-social" onclick="in_clicked()"></a>
+        </div>
     </div>
      <!-- Header content with banner image -->
     <div class="row">
@@ -47,12 +53,9 @@
         <div class="column2">
         <img src="./imgs/party1.png" alt="banner" width="500px">
         </div>
-
-
-        
     </div>
     <div class="events-title">
-        <p>Eventos reaLizados</p>
+        <p>Eventos realizados</p>
     </div>
     <div class="some-events">
         <div id="event1">
@@ -65,6 +68,30 @@
 
         </div>
     </div>
+    <!-- ----------------------  Contact ------------------------------------------>
+    <hr class="divider">
+    <form method="POST" class="contact-form">
+        <div class="contact-title">
+            <p>Contacto</p>
+        </div>
+        <div class="contact-name">
+            <p>Nombre</p>
+            <input class="name" type="text" placeholder="name">
+        </div>
+        <div class="contact-email">
+            <p>Email</p>
+            <input class="email" type="email" placeholder="email">
+        </div>
+        <div class="contact-message">
+            <p>Mensaje</p>
+            <textarea class="message" name="" id="" cols="30" rows="10" placeholder="message" required></textarea>
+        </div>
+        
+        <div class="contact-send">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+    
     <div id="balloon-container">
     </div>
     
@@ -80,6 +107,7 @@
     </script>
     <script type="text/javascript" src="./js/scripts.js"></script>
     <script type="text/javascript" src="./js/balloons.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
    
 </body>
 </html>

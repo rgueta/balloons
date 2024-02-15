@@ -66,39 +66,38 @@ nav .menuBtn{
   position: fixed;
   top: 0;
   right: 0%;
-  background-color: rgb(44, 1, 197);
+  background-color: rgba(22, 2, 93, 0.6);
+  /* background-color: rgb(44, 1, 197); */
   overflow-x: hidden;
   transition: 0.3s ease-in;
   padding-top: 60px;
   display: none;
+  width: 200px;
 }
  
 .sideNav a{
-  padding: 8px 8px 8px 40px;
+  padding: 15px 30px;
   display: block;
-  font-size: 25px;
-  font-weight: 500;
+  font-size: 1.2em;
+  font-weight: 400;
   color: #d1d1d1;
   transition: 0.3s;
   text-decoration: none;
 }
-.sideNav a button {
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: blue;
-  font-size: 16px;
-  border-style: none;
-  font-weight: 700;
-}
+
 .sideNav a:hover{
   color: white;
+  /* background-color: blue; */
+  background-color: rgb(44, 1, 197);
 }
-.sideNav .closeBtn{
+.closeBtn{
   position: absolute;
   top: 10px;
-  right: 25px;
-  font-size: 20px;
-  margin-left: 50px;
+
+}
+
+.closeBtn i{
+  font-size: 1.4em;
 }
 
 /* main section --------------------- */
@@ -133,11 +132,12 @@ nav .menuBtn{
 
 /* Section events */
 .events-title{
-  background: rgba(9,9,9,0.1);
+  background: rgba(9,9,9,0.2);
   padding: 10px;
 }
 
 .events-title p{
+  font-size: 1.5em;
   text-align: center;
   width: 100%;
 }
@@ -149,30 +149,31 @@ nav .menuBtn{
   display: flex;
 }
 
-#event1, #event2, #event3{
-  background-size:contain;
-  background-repeat: no-repeat;
-  width: 33%;
-  border-color:#d1d1d1;
-  border-style: solid;
-  border-width: 1px;
-
-}
-
 #event2, #event3{
   margin-left: 10px;
 }
 
 #event1{
-  background-image:url(../imgs/party2.png);
+  background:url(../imgs/party2.png) no-repeat;
 }
 
 #event2{
-  background-image:url(../imgs/party3.png);
+  background:url(../imgs/party3.png) no-repeat;
 }
 
 #event3{
-  background-image:url(../imgs/party4.png);
+  background:url(../imgs/party4.png) no-repeat;
+}
+
+#event1, #event2, #event3{
+  background-size:contain;
+  background-position-x: center;
+  background-position-y: center;
+  width: 100%;
+  border-color:#d1d1d1;
+  border-style: solid;
+  border-width: 1px;
+
 }
 
 /* Responsive section ------------------ */
@@ -202,15 +203,13 @@ nav .menuBtn{
   }
 
   .some-events{
-    justify-content: space-between;
     flex-direction: column;
     height: auto;
     overflow: hidden;
-    /* padding-right: 10px; */
   }
 
   #event1, #event2, #event3{
-    display: block;
+    background-size: contain;
     width: 100%;
     height:200px;
     margin-bottom: 10px;
@@ -225,7 +224,6 @@ nav .menuBtn{
   }
   .row {
     flex-direction: column;
- 
   }
   .row .column1 {
     padding: 30px;
